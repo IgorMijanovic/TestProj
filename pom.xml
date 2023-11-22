@@ -27,6 +27,12 @@
             <version>1.0-SNAPSHOT</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.timAI.skproject1</groupId>
+            <artifactId>DodavanjeTerminaPeriodImp</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>runtime</scope>
+        </dependency>
 
     </dependencies>
 

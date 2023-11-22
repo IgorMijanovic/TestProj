@@ -16,7 +16,8 @@ public class Main{
             ObradaTermina.getObj().initRaspored();
         } else if (unos.equals("druga")) {
             flag = 2;
-//            Class.forName("ZakazivanjeJedanImpl");
+            Class.forName("PeriodImplementacija");
+            ObradaTermina.getObj().initRaspored();
         }else {
             System.out.println("Pogresan unos");
             return;
@@ -69,15 +70,41 @@ public class Main{
 
             } else if (opcija == 4) {
 
-                System.out.println("unesite termin koji zelite da obrisete(unos treba da bude odvojen zarezima)");
+                System.out.println("unesite kako zelite da pretrazite raspored(unos treba da bude odvojen zarezima)");
                 unos = scanner.nextLine();
                 String[] split = unos.split(",");
                 ObradaTermina.getObj().pretragaTermina(split);
+
             } else if (opcija == 5) {
-                System.out.println("opcija 5");
+
+                System.out.println("unesite koji format exporta zelite\n-csv-\t-json-\t-pdf-");
+                unos = scanner.nextLine();
+                if(unos.equals("csv")){
+                    System.out.println("unesit sta hocete da exportujete(odvojeno zarezima)");
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }else if(unos.equals("json")){
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }else if(unos.equals("pdf")){
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }
             } else if (opcija == 6) {
-                System.out.println("opcija 6");
-            }
+                System.out.println("unesite koji format importa zelite\n-csv-\t-json-\t-pdf-");
+                unos = scanner.nextLine();
+                if(unos.equals("csv")){
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }else if(unos.equals("json")){
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }else if(unos.equals("pdf")){
+                    unos = scanner.nextLine();
+                    String[] split = unos.split(",");
+                }
+            }else
+                break;
 //            System.out.println("Odaberite opciju:\n" +
 //                    "1.Zakazi termin : -1-\n" +
 //                    "2.Brisanje zakazanog termina : -2-\n" +
