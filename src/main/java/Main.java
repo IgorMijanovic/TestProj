@@ -34,7 +34,7 @@ public class Main{
                 "8.Exit : -8-");
         unos = scanner.nextLine();
         opcija = Integer.parseInt(unos);
-        while (opcija != 7){
+        while (opcija != 8){
 
             if(opcija == 1){
 
