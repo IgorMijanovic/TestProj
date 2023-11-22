@@ -30,7 +30,8 @@ public class Main{
                 "4.Pretraga : -4-\n" +
                 "5.Export : -5-\n" +
                 "6.Import : -6-\n" +
-                "7.Exit : -7-");
+                "7.Ispisi raspored : -7-\n" +
+                "8.Exit : -8-");
         unos = scanner.nextLine();
         opcija = Integer.parseInt(unos);
         while (opcija != 7){
@@ -103,6 +104,10 @@ public class Main{
                     unos = scanner.nextLine();
                     ObradaTermina.getObj().importovanjeJson(unos);
                 }
+            }else if(opcija == 7){
+                for(Termin t : ObradaTermina.getObj().getRaspored()){
+                    System.out.println(t);
+                }
             }else
                 break;
 //            System.out.println("Odaberite opciju:\n" +
@@ -120,7 +125,9 @@ public class Main{
 //        ObradaTermina.getObj().dodajNoviTermin("s1", "13","15","01.10.2023", "Prof:aleksa", "Tip:predavanje");
 //        System.out.println(ObradaTermina.getObj().getRaspored());
 //        s1,13,15,01.10.2023,Prof:aleksa,Tip:predavanje
-        System.out.println(ObradaTermina.getObj().getRaspored());
+        for(Termin t : ObradaTermina.getObj().getRaspored()){
+            System.out.println(t);
+        }
     }
 
 }
