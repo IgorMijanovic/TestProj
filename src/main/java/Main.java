@@ -83,25 +83,25 @@ public class Main{
                     System.out.println("unesit sta hocete da exportujete(odvojeno zarezima)");
                     unos = scanner.nextLine();
                     String[] split = unos.split(",");
+                    ObradaTermina.getObj().exportCSV(split);
                 }else if(unos.equals("json")){
                     unos = scanner.nextLine();
                     String[] split = unos.split(",");
+                    ObradaTermina.getObj().exportJson(split);
                 }else if(unos.equals("pdf")){
                     unos = scanner.nextLine();
                     String[] split = unos.split(",");
+                    ObradaTermina.getObj().exportPDF(split);
                 }
             } else if (opcija == 6) {
-                System.out.println("unesite koji format importa zelite\n-csv-\t-json-\t-pdf-");
+                System.out.println("unesite koji format importa zelite\n-csv-\t-json-");
                 unos = scanner.nextLine();
                 if(unos.equals("csv")){
                     unos = scanner.nextLine();
-                    String[] split = unos.split(",");
-                }else if(unos.equals("json")){
+                    ObradaTermina.getObj().importovanjeCSV(unos);
+                }else if(unos.equals("json")) {
                     unos = scanner.nextLine();
-                    String[] split = unos.split(",");
-                }else if(unos.equals("pdf")){
-                    unos = scanner.nextLine();
-                    String[] split = unos.split(",");
+                    ObradaTermina.getObj().importovanjeJson(unos);
                 }
             }else
                 break;
